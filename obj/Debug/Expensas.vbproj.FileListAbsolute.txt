@@ -1,0 +1,16 @@
+c:\users\user\documents\visual studio 2015\Projects\Expensas\Expensas\bin\Debug\Expensas.exe.config
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\bin\Debug\Expensas.exe
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\bin\Debug\Expensas.pdb
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\bin\Debug\Expensas.xml
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.vbprojResolveAssemblyReference.cache
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.Frm_abm_Consorcios.resources
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.Frm_Consorcios.resources
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.Resources.resources
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.vbproj.GenerateResource.Cache
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.exe
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.xml
+c:\Users\user\documents\visual studio 2015\Projects\Expensas\Expensas\obj\Debug\Expensas.pdb
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\bin\Debug\Expensas.exe.config
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.exe
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.xml
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.pdb
