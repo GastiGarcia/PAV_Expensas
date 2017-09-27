@@ -154,7 +154,7 @@ Partial Class Frm_abm_Consorcios
         Me.Controls.Add(Me.txt_Nombre)
         Me.Controls.Add(Me.Label2)
         Me.Name = "Frm_abm_Consorcios"
-        Me.Text = "Frm_abm_Consorcios"
+        Me.Text = "Consorcio"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

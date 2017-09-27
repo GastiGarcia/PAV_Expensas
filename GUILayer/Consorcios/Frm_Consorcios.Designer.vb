@@ -204,14 +204,14 @@ Partial Class Frm_Consorcios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(501, 442)
+        Me.ClientSize = New System.Drawing.Size(452, 405)
         Me.Controls.Add(Me.btn_quitar)
         Me.Controls.Add(Me.btn_salir)
         Me.Controls.Add(Me.btn_editar)
         Me.Controls.Add(Me.btn_nuevo)
         Me.Controls.Add(Me.pnl_filtros)
         Me.Name = "Frm_Consorcios"
-        Me.Text = "Form1"
+        Me.Text = "Consorcios"
         Me.pnl_filtros.ResumeLayout(False)
         Me.pnl_filtros.PerformLayout()
         CType(Me.dgv_consorcios, System.ComponentModel.ISupportInitialize).EndInit()

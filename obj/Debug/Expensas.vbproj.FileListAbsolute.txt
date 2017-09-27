@@ -22,3 +22,5 @@ C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_abm_Cons
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_Consorcios.resources
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Resources.resources
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.vbproj.GenerateResource.Cache
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_Principal.resources
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_Login.resources

@@ -72,6 +72,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Entites\Usuario.vb" />
+    <Compile Include="BusinessLayer\Services\UsuarioService.vb" />
+    <Compile Include="DataLayer\DAOs\UsuarioDao.vb" />
     <Compile Include="DataLayer\Helper\BDHelper.vb" />
     <Compile Include="GUILayer\Consorcios\Frm_abm_Consorcios.Designer.vb">
       <DependentUpon>Frm_abm_Consorcios.vb</DependentUpon>
@@ -84,6 +87,18 @@
     </Compile>
     <Compile Include="GUILayer\Consorcios\Frm_Consorcios.Designer.vb">
       <DependentUpon>Frm_Consorcios.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Login\Frm_Login.Designer.vb">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Login\Frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Login\Frm_Principal.Designer.vb">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Login\Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -108,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Consorcios\Frm_Consorcios.resx">
       <DependentUpon>Frm_Consorcios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Login\Frm_Login.resx">
+      <DependentUpon>Frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Login\Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
