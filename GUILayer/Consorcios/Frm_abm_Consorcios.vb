@@ -4,7 +4,7 @@
         update
         delete
     End Enum
-    ''aasdasda
+
     Private _action As Opcion = Opcion.insert
     Private _row_selected As DataGridViewRow
 
@@ -92,14 +92,9 @@
                 End If
             Case Opcion.update
                 If validar_campos() Then
-                    MsgBox(txt_Nombre.ToString())
-                    str_sql = "UPDATE Consorcio SET nombre = '"
-                    str_sql += txt_Nombre.Text + "', id_tipo_consorcio = "
-                    str_sql += cbo_tipo.SelectedValue.ToString + ", calle ='"
-                    str_sql += txt_calle.Text + "', nro_calle ='"
-                    str_sql += txt_nro.Text + "', id_barrio = '"
-                    str_sql += cbo_Barrio.SelectedValue.ToString
-                    str_sql += " WHERE id_conorcio = " + _row_selected.Cells("col_id").Value
+
+                    str_sql = "UPDATE consorcio SET nombre = '" & txt_Nombre.Text & "', id_tipo_consorcio = " & cbo_tipo.SelectedValue.ToString & ",  calle = '" & txt_calle.Text & "', nro_calle = " & txt_nro.Text & ", id_barrio = " & cbo_Barrio.SelectedValue.ToString & " WHERE id_conorcio = " & _row_selected.Cells("col_id").Value & ""
+
                     If BDHelper.getDBHelper.EjecutarSQL(str_sql) > 0 Then
                         MessageBox.Show("Consorcio actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
@@ -108,19 +103,31 @@
                     End If
                 End If
             Case Opcion.delete
-                'Dim existe As Object
+                Dim existe As DataTable
 
                 If MsgBox("Seguro que desea borrar el consorcio seleccionado?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                    str_sql = "Select COUNT(*) from Propiedad P JOIN Consorcio C ON P.id_consorcio=C.id_conorcio AND C.id_conorcio =" + ToString(3) ' _row_selected.Cells("col_id").Value.ToString
-                    MessageBox.Show(_row_selected.Cells("col_id").Value, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    MessageBox.Show(BDHelper.getDBHelper.EjecutarSQL(str_sql), "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                    If BDHelper.getDBHelper.EjecutarSQL(str_sql) <= 0 Then
+                    str_sql = "Select * from Propiedad P JOIN Consorcio C ON P.id_consorcio=C.id_conorcio AND C.id_conorcio =" + _row_selected.Cells("col_id").Value
+                    existe = BDHelper.getDBHelper.ConsultaSQL(str_sql)
+                    If existe.Rows.Count > 0 Then
                         MessageBox.Show("Consorcio asociado a propiedades", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Dispose()
                     Else
-                        MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        str_sql = "DELETE FROM Consorcio WHERE id_conorcio= " + _row_selected.Cells("col_id").Value
+                        If BDHelper.getDBHelper.EjecutarSQL(str_sql) <= 0 Then
+                            MessageBox.Show("Error al intentar eliminar consorcio!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                        Else
+                            MessageBox.Show("Consorcio eliminado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Me.Dispose()
+                        End If
                     End If
+
+                    ' If BDHelper.getDBHelper.EjecutarSQL(str_sql) <= 0 Then
+                    'MessageBox.Show("Consorcio asociado a propiedades", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'Me.Dispose()
+                    'Else
+                    'MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'End If
                 End If
         End Select
     End Sub
@@ -183,5 +190,6 @@
     Private Function existe_nombre() As Boolean
         Return BDHelper.getDBHelper.ConsultaSQL("Select * from Consorcio where nombre = '" + txt_Nombre.Text + "'").Rows.Count > 0
     End Function
+
 
 End Class

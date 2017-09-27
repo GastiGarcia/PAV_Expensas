@@ -14,3 +14,11 @@ C:\Users\user\Source\Repos\PAV_Expensas\Expensas\bin\Debug\Expensas.exe.config
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.exe
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.xml
 C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.pdb
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\bin\Debug\Expensas.exe
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\bin\Debug\Expensas.pdb
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\bin\Debug\Expensas.xml
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.vbprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_abm_Consorcios.resources
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Frm_Consorcios.resources
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.Resources.resources
+C:\Users\user\Source\Repos\PAV_Expensas\Expensas\obj\Debug\Expensas.vbproj.GenerateResource.Cache

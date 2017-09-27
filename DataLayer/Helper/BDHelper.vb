@@ -19,61 +19,61 @@ Public Class BDHelper
             Return instance
         End Function
 
-        Public Function EjecutarSQL(ByVal strSql As String) As Integer
-            ' Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
-            Dim conexion As New SqlConnection
-            Dim cmd As New SqlCommand
+    Public Function EjecutarSQL(ByVal strSql As String) As Integer
+        ' Se utiliza para sentencias SQL del tipo “Insert/Update/Delete”
+        Dim conexion As New SqlConnection
+        Dim cmd As New SqlCommand
 
-            'Try Catch Finally
-            'Trata de ejecutar el código contenido dentro del bloque Try - Catch
-            'Si hay error lo capta a través de una excepción
-            'Si no hubo error
-            Try
-                ' Establece que conexión usar
-                conexion.ConnectionString = string_conexion
-                ' Abre la conexión
-                conexion.Open()
+        'Try Catch Finally
+        'Trata de ejecutar el código contenido dentro del bloque Try - Catch
+        'Si hay error lo capta a través de una excepción
+        'Si no hubo error
+        Try
+            ' Establece que conexión usar
+            conexion.ConnectionString = string_conexion
+            ' Abre la conexión
+            conexion.Open()
 
-                cmd.Connection = conexion
-                cmd.CommandType = CommandType.Text
-                ' Establece la instrucción a ejecutar
-                cmd.CommandText = strSql
-                ' Retorna el resultado de ejecutar el comando
-                Return cmd.ExecuteNonQuery()
-            Catch ex As Exception
-                Throw ex
-            Finally
-                ' Cierra la conexión
-                If conexion.State = ConnectionState.Open Then conexion.Close()
-                conexion.Dispose()
-            End Try
-        End Function
+            cmd.Connection = conexion
+            cmd.CommandType = CommandType.Text
+            ' Establece la instrucción a ejecutar
+            cmd.CommandText = strSql
+            ' Retorna el resultado de ejecutar el comando
+            Return cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            ' Cierra la conexión
+            If conexion.State = ConnectionState.Open Then conexion.Close()
+            conexion.Dispose()
+        End Try
+    End Function
 
 
-        Public Function ConsultaSQL(ByVal strSql As String) As Data.DataTable
-            ' Se utiliza para sentencias SQL del tipo “Select”
-            ' La función recibe por valor una sentencia sql como string, devuelve un objeto de tipo DataTable
-            Dim conexion As New SqlConnection
-            Dim cmd As New SqlCommand
-            Dim tabla As New DataTable
-            Try
-                conexion.ConnectionString = string_conexion
-                conexion.Open()
-                cmd.Connection = conexion
-                cmd.CommandType = CommandType.Text
-                cmd.CommandText = strSql
-                ' El datatable se carga con el resultado de ejecutar la sentencia en el motor de base de datos
-                tabla.Load(cmd.ExecuteReader)
-                ' La función retorna el objeto datatable con 0, 1 o mas registros
-                Return tabla
-            Catch ex As Exception
-                Throw ex
-            Finally
-                If conexion.State = ConnectionState.Open Then conexion.Close()
-                'Dispose() libera los recursos asociados a la conexón
-                conexion.Dispose()
-            End Try
-        End Function
+    Public Function ConsultaSQL(ByVal strSql As String) As Data.DataTable
+        ' Se utiliza para sentencias SQL del tipo “Select”
+        ' La función recibe por valor una sentencia sql como string, devuelve un objeto de tipo DataTable
+        Dim conexion As New SqlConnection
+        Dim cmd As New SqlCommand
+        Dim tabla As New DataTable
+        Try
+            conexion.ConnectionString = string_conexion
+            conexion.Open()
+            cmd.Connection = conexion
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = strSql
+            ' El datatable se carga con el resultado de ejecutar la sentencia en el motor de base de datos
+            tabla.Load(cmd.ExecuteReader)
+            ' La función retorna el objeto datatable con 0, 1 o mas registros
+            Return tabla
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If conexion.State = ConnectionState.Open Then conexion.Close()
+            'Dispose() libera los recursos asociados a la conexón
+            conexion.Dispose()
+        End Try
+    End Function
 
     Public Function ConsultarSQLConParametros(ByVal sqlStr As String, ByVal params As Object()) As Data.DataTable
         ' Se utiliza para sentencias SQL del tipo “Select” con parámetros recibidos desde la interfaz
